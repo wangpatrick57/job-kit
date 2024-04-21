@@ -70,5 +70,5 @@ To import the CSV files to another database, create all tables (see
 `schema.sql` and optionally `fkindexes.sql`) and run the same copy as
 above statements but replace the keyword "to" by "from".
 
-### Questions
-Contact Viktor Leis (leis@in.tum.de) if you have any questions.
+### Repository
+`original_queries_archive/` contains the original JOB queries. The queries in the repo itself are the original JOB queries without `MIN()` at the top level. This makes their row counts not all 1, which makes cardinality estimation actually meaningful on the JOB queries.

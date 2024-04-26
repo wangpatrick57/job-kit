@@ -71,4 +71,5 @@ To import the CSV files to another database, create all tables (see
 above statements but replace the keyword "to" by "from".
 
 ### Repository
-`original_queries_archive/` contains the original JOB queries. The queries in the repo itself are the original JOB queries without `MIN()` at the top level. This makes their row counts not all 1, which makes cardinality estimation actually meaningful on the JOB queries.
+`cardest_job_queries/` contains the JOB queries modified to be meaningful when estimating cardinality (by getting rid of `MIN()`).
+`original_job_queries_archive/` contains the original JOB queries. The queries in the repo itself are the original JOB queries without `MIN()` at the top level. This makes their row counts not all 1, which makes cardinality estimation actually meaningful on the JOB queries.

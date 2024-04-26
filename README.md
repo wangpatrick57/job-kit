@@ -72,4 +72,5 @@ above statements but replace the keyword "to" by "from".
 
 ### Repository
 `cardest_job_queries/` contains the JOB queries modified to be meaningful when estimating cardinality (by getting rid of `MIN()`).
-`original_job_queries_archive/` contains the original JOB queries. The queries in the repo itself are the original JOB queries without `MIN()` at the top level. This makes their row counts not all 1, which makes cardinality estimation actually meaningful on the JOB queries.
+`original_job_queries_archive/` contains the original JOB queries from [this repo](https://github.com/gregrahn/join-order-benchmark). These queries have `MIN()` at the top level, which makes their row counts all 1.
+`cardest_joblight_queries/` and `original_joblight_queries_archive/` are the analogous things but for JOB-light. JOB-light uses a subset of JOB's schema (only 6 tables) and the same table, but a different set of queries. The original queries can be found in [this repo](https://github.com/andreaskipf/learnedcardinalities/blob/master/workloads/job-light.sql).
